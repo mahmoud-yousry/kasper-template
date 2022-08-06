@@ -310,6 +310,7 @@ header nav .search i {
 /* Start Services */
 .services {
     padding: var(--section-padding);
+    min-height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -317,7 +318,7 @@ header nav .search i {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         grid-column-gap: 40px;
-        grid-row-gap: 70px;
+        grid-row-gap: 60px;
     }
 }
 
@@ -333,7 +334,7 @@ header nav .search i {
     .services .srv-box {
         flex-direction: column;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .services .srv-box i {
         margin: 0 0 20px;
@@ -422,3 +423,90 @@ header nav .search i {
     top: 1px;
 }
 /* End Design */
+
+/* Start Portfolio */
+.portfolio {
+    padding: var(--section-padding);
+    min-height: 100vh;
+}
+
+.portfolio .shuffle {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .shuffle li {
+    padding: 10px;
+}
+
+.portfolio .shuffle li.active,
+.portfolio .shuffle li:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.portfolio .imgs-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.portfolio .imgs-container .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .imgs-container .box:hover img {
+    transform: rotate(4deg) scale(1.1);
+}
+
+.portfolio .imgs-container .box:hover .caption {
+    bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .portfolio .imgs-container .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1199px) {
+    .portfolio .imgs-container .box {
+        flex-basis: 25%;
+    }
+}
+
+.portfolio .imgs-container img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+.portfolio .imgs-container .box .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    bottom: -100%;
+    transition: 0.3s;
+}
+
+.portfolio .imgs-container .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.portfolio .imgs-container .box .caption p {
+    color: var(--main-color);
+}
+
+.portfolio .imgs-container .more {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--main-color);
+    font-size: 18px;
+    padding: 15px 25px;
+    margin: 40px auto;
+}
+/* End Portfolio */
