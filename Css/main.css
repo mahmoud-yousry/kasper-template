@@ -217,7 +217,7 @@ header nav .search i {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .landing .text {
@@ -297,7 +297,7 @@ header nav .search i {
 .landing .bullets li {
     height: 20px;
     width: 20px;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 50%;
     margin-left: 10px;
 }
@@ -837,3 +837,218 @@ header nav .search i {
 /* End Quote */
 
 /* End About */
+
+/* Start Pricing */
+.pricing {
+    padding: var(--section-padding);
+}
+
+.pricing .container {
+    text-align: center;
+}
+
+.pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 767px) {
+    .pricing .plans {
+        grid-row-gap: 50px;
+    }
+    .pricing .plans .plan {
+        background-color: #f7f7f7 !important;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .pricing .plans {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 1199px) {
+    .pricing .plans {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+.pricing .plans .plan {
+    background-color: #fcfcfc;
+}
+
+.pricing .plans .plan .head {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan .head  h3 {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.pricing .plans .plan .head .price {
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+}
+
+.pricing .plans .plan .head .price::before{
+    content: "$";
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: -25px;
+}
+
+.pricing .plans .plan .head .price::after{
+    content: "/Mo";
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    right: -40px;
+}
+
+.pricing .plans .plan ul {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan ul li {
+    padding: 20px 10px;
+    position: relative;
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pricing .plans .plan .foot {
+    padding: 40px 20px;
+}
+
+.pricing .plans .plan .foot a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 auto;
+    width: fit-content;
+    border: 1px solid var(--main-color);
+}
+
+.pricing .container .contact-text {
+    margin: 40px 0;
+    font-size: 18px;
+}
+
+.pricing .container .contact-link {
+    display: block;
+    padding: 10px 30px;
+    margin: 0 auto;
+    width: fit-content;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* Start Subscribe */
+.subscribe {
+    padding: var(--section-padding);
+    background-image: url(../img/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.subscribe .container form {
+    display: flex;
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+}
+
+.subscribe .container form i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+
+.subscribe .container form input[type="email"] {
+    position: relative;
+    padding: 20px 20px 20px 50px;
+    border: 1px solid #fff;
+    border-right: none;
+    background: none;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+    color: #fff;
+}
+.subscribe .container form input[type="submit"] {
+    width: 130px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 20px 10px;
+    border: 1px solid #fff;
+    border-left: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.subscribe .container form input[type="email"]:focus,
+.subscribe .container form input[type="submit"]:focus {
+    outline: none;
+}
+
+.subscribe .container form ::placeholder {
+    color: #fff;
+}
+
+.subscribe .container p {
+    line-height: 1.8;
+    margin-left: 50px;
+}
+
+@media (max-width: 991px) {
+    .subscribe .container p {
+        margin: 20px 0 0;
+    }
+}
+/* End Subscribe */
+
+/* End Pricing */
