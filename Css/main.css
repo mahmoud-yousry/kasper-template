@@ -1143,3 +1143,55 @@ header nav .search i {
     font-size: 14px;
 }
 /* End Contact */
+
+/* Start Footer */
+.footer {
+    padding: 50px 0;
+    background-image: url(../img/subscribe.jpg);
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footer .container {
+    position: relative;
+}
+
+.footer .container img {
+    margin-bottom: 30px;
+}
+
+.footer .container p:not(.copyright) {
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: 1px solid #fff;
+    width: fit-content;
+    padding: 20px;
+    margin: 0 auto 20px;
+}
+
+.footer .container .social-icons {
+    margin-bottom: 60px;
+}
+
+.footer .container .social-icons i {
+    margin: 0px 14px;
+    cursor: pointer;
+}
+
+.footer .container .copyright span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* End Footer */
